@@ -13,7 +13,8 @@ Control any IR device using a Hosyond 4" ESP32 CYD (Cheap Yellow Display) as a t
 | Device | Notes |
 |---|---|
 | Hosyond 4" ESP32 CYD (model 3248S040) | The 4" model has different SPI pins than the common 2.8" CYD — see setup notes |
-| M5StickC Plus | Has built-in IR transmitter on pin 32 |
+| M5StickC Plus 1.1 | Has built-in IR transmitter on pin 32 |
+| IR Remote | Infrared Emitter & Receiver Unit |
 
 ---
 
