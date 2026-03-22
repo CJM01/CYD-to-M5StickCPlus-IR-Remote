@@ -98,7 +98,7 @@ Note the **protocol**, **address**, and **command** values for each button.
 Every CYD unit varies slightly. Run the calibration sketch first:  
 Flash `CYD/CYD_Touch_Calibration/CYD_Touch_Calibration.ino` to the CYD.  
 Follow the on-screen prompts to tap each corner of your devices screen.  
-Note the 4 RAW X/Y values printed to Arduino IDE's Serial Monitor (set baud to 115200 or you'll get garbage characters).
+Note the 4 RAW X/Y values printed to the Arduino IDE's Serial Monitor (set baud to 115200 or you'll get garbage characters).
 
 Use those values to update the `map()` lines in the main CYD sketch:
 ```cpp
