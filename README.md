@@ -171,18 +171,13 @@ CYD-to-M5StickCPlus-IR-Remote/
 │
 ├── README.md
 ├── CYD/
-│   ├── CYD_IR_Remote/
-│   │   └── CYD_IR_Remote.ino
-│   └── CYD_Touch_Calibration/
-│       └── CYD_Touch_Calibration.ino
+│   └── CYD_IR_Remote.ino
+│   └── CYD_Touch_Calibration.ino
 │
-├── M5StickCPlus/
-│   ├── M5_IR_Remote/
-│   │   └── M5_IR_Remote.ino
-│   ├── M5_IR_Sniffer/
-│   │   └── M5_IR_Sniffer.ino
-│   └── M5_MAC_Address/
-│       └── M5_MAC_Address.ino
+├── M5Stick/
+│   └── M5_IR_Remote.ino
+│   └── M5_IR_Sniffer.ino
+│   └── M5_MAC_Address.ino
 │
 └── docs/
     └── User_Setup.h
