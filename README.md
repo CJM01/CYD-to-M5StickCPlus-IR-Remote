@@ -88,10 +88,11 @@ Follow these steps in order:
 Flash `M5StickCPlus/M5_MAC_Address/M5_MAC_Address.ino` to the M5.  
 The MAC address will display on screen. Write it down — you'll need it for the CYD sketch.
 
-### Step 2 — Sniff Your IR Remote (optional)
-If you want to learn the IR codes from your existing remote:  
+### Step 2 — Sniff Your IR Remote
+You'll want to learn the IR codes from your existing remote:  
 Flash `M5StickCPlus/M5_IR_Sniffer/M5_IR_Sniffer.ino` to the M5.  
-Point your remote at the IR Remote and press buttons. Codes will display on screen.  
+Point your remote control at the IR Remote and press buttons. Codes will display on screen.
+Bright light will impact the IR Remote. If the codes keep changing then protect the IR Remote from the lights.
 Note the **protocol**, **address**, and **command** values for each button.
 
 ### Step 3 — Calibrate the CYD Touchscreen
