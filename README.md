@@ -2,6 +2,7 @@
 
 - Made with Claude AI
 - Control any IR device using a Hosyond 4" ESP32 CYD (Cheap Yellow Display) as a touchscreen remote, sending commands wirelessly via ESP-NOW to an M5StickC Plus which blasts the IR signal.
+- This project uses the [Arduino IDE](https://www.arduino.cc/en/software/)
 
 ```
 [ CYD Touchscreen ] --ESP-NOW--> [ M5StickC Plus ] --IR--> [ TV / Device ]
@@ -90,14 +91,14 @@ The MAC address will display on screen. Write it down — you'll need it for the
 ### Step 2 — Sniff Your IR Remote (optional)
 If you want to learn the IR codes from your existing remote:  
 Flash `M5StickCPlus/M5_IR_Sniffer/M5_IR_Sniffer.ino` to the M5.  
-Point your remote at the M5 and press buttons. Codes will display on screen.  
+Point your remote at the IR Remote and press buttons. Codes will display on screen.  
 Note the **protocol**, **address**, and **command** values for each button.
 
 ### Step 3 — Calibrate the CYD Touchscreen
 Every CYD unit varies slightly. Run the calibration sketch first:  
 Flash `CYD/CYD_Touch_Calibration/CYD_Touch_Calibration.ino` to the CYD.  
-Follow the on-screen prompts to tap each corner.  
-Note the 4 RAW X/Y values printed to Serial Monitor (115200 baud).
+Follow the on-screen prompts to tap each corner of your devices screen.  
+Note the 4 RAW X/Y values printed to Arduino IDE's Serial Monitor (set baud to 115200 or you'll get garbage characters).
 
 Use those values to update the `map()` lines in the main CYD sketch:
 ```cpp
@@ -108,14 +109,14 @@ int y = map(p.y, TOP_LEFT_Y, BOTTOM_LEFT_Y, 0, 240);
 ### Step 4 — Update and Flash the Main Sketches
 
 **In `CYD/CYD_IR_Remote/CYD_IR_Remote.ino`:**
-- Replace the MAC address with your M5's MAC:
+- Replace the MAC address with your M5's MAC. Example of mine, yours may differ:
   ```cpp
   uint8_t broadcastAddress[] = {0xF0, 0x24, 0xF9, 0xBC, 0x1D, 0x1C};
   ```
 - Update the `map()` values with your calibration results
 
 **In `M5StickCPlus/M5_IR_Remote/M5_IR_Remote.ino`:**
-- Update the IR address and command codes to match your device:
+- Update the IR address and command codes to match your device. Example of mine, yours may differ:
   ```cpp
   const uint16_t NEC_ADDRESS = 0x586;
   // POWER = 0xF, VOL_UP = 0xC, VOL_DOWN = 0xD
