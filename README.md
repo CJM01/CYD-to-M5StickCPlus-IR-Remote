@@ -1,6 +1,7 @@
 # CYD to M5StickC Plus — ESP-NOW IR Remote
 
-Control any IR device using a Hosyond 4" ESP32 CYD (Cheap Yellow Display) as a touchscreen remote, sending commands wirelessly via ESP-NOW to an M5StickC Plus which blasts the IR signal.
+-Made with Claude AI
+-Control any IR device using a Hosyond 4" ESP32 CYD (Cheap Yellow Display) as a touchscreen remote, sending commands wirelessly via ESP-NOW to an M5StickC Plus which blasts the IR signal.
 
 ```
 [ CYD Touchscreen ] --ESP-NOW--> [ M5StickC Plus ] --IR--> [ TV / Device ]
