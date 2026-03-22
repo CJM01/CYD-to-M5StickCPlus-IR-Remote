@@ -191,9 +191,9 @@ CYD-to-M5StickCPlus-IR-Remote/
 ---
 ## Links to Hardware used
 
-#CYD: https://www.lcdwiki.com/4.0inch_ESP32-32E_Display
-#M5StckC Plus 1.1: https://shop.m5stack.com/products/m5stickc-plus-esp32-pico-mini-iot-development-kit
-#IR Remote: https://shop.m5stack.com/products/ir-unit
+##CYD: https://www.lcdwiki.com/4.0inch_ESP32-32E_Display
+##M5StckC Plus 1.1: https://shop.m5stack.com/products/m5stickc-plus-esp32-pico-mini-iot-development-kit
+##IR Remote: https://shop.m5stack.com/products/ir-unit
 
 ---
 
